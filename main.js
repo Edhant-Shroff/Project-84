@@ -28,14 +28,31 @@ function my_keydown(e)
 	keyPressed = e.keyCode;
 	console.log(keyPressed);
 	
-		if(keyPressed >=97 && keyPressed<=122) {
+		if(keyPressed >=65 && keyPressed<=90) {
 			alphabetkey();
 		}
-		//write a code to check the type of key pressed
+		else if(keyPressed >=97 && keyPressed<=122) {
+			alphabetkey();
+		}
+		else if(keyPressed >=48 && keyPressed<=57) {
+			numberkey();
+		}
+		else if(keyPressed >=37 && keyPressed<=40) {
+			arrowkey();
+		}
+		
+		else if(keyPressed >=17 && keyPressed<=18) {
+			specialkey();
+		}
+		else if(keyPressed >=27 ) {
+			specialkey();
+		}
 		else{
 			otherkey();
 			document.getElementById("d1").innerHTML="You pressed symbol or other key";
 		}
+
+	
 }
 
 function alphabetkey()
@@ -46,17 +63,17 @@ function alphabetkey()
 }
 function numberkey()
 {
-	img_image="otherkey.png";
+	img_image="numkey.png";
 	add();
 }
 function arrowkey()
 {
-	img_image="otherkey.png";
+	img_image="Arrkey.png";
 	add();
 }
 function specialkey()
 {
-	img_image="otherkey.png";
+	img_image="spkey.png";
 	add();
 }
 function otherkey()
